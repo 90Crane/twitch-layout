@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRB</title>
+    <link rel="stylesheet" href="../assets/css/theme.css" />
+    <style>
+      .main-title {
+        position: absolute;
+        top: 120px;
+        left: 120px;
+        max-width: 980px;
+      }
+
+      .chat-box {
+        position: absolute;
+        left: 120px;
+        bottom: 120px;
+        width: 860px;
+        height: 420px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .chat-message {
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 0.95rem;
+      }
+
+      .support-panel {
+        position: absolute;
+        top: 180px;
+        right: 120px;
+        width: 560px;
+        padding: 18px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .support-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .support-item strong {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="screen">
+      <div class="grid-overlay"></div>
+
+      <section class="main-title">
+        <div class="title">Be Right Back</div>
+        <div class="subtitle">Taking short break, stay tuned!</div>
+      </section>
+
+      <section class="chat-box panel glow">
+        <div class="section-label">Chat</div>
+        <div class="chat-message"><span class="badge">MOD</span> Welcome back soon! 💚</div>
+        <div class="chat-message"><span class="badge">SUB</span> We’ll wait right here 👀</div>
+        <div class="chat-message"><span class="badge">VIEWER</span> Hydrate check!</div>
+      </section>
+
+      <aside class="support-panel panel glow">
+        <div class="section-label">Latest Support</div>
+        <div class="support-item"><span>Latest Follower</span><strong>@new_follower</strong></div>
+        <div class="support-item"><span>Latest Subscriber</span><strong>@new_sub</strong></div>
+        <div class="support-item"><span>Latest Cheer</span><strong>500 bits</strong></div>
+        <div class="support-item"><span>Latest Tip</span><strong>$10.00</strong></div>
+      </aside>
+
+      <footer class="social-bar">
+        <div class="section-label">Break Mode</div>
+        <div class="social-links">
+          <div><span>TW:</span> @yourname</div>
+          <div><span>YT:</span> @yourname</div>
+          <div><span>IG:</span> @yourname</div>
+          <div><span>DC:</span> yourserver.gg</div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

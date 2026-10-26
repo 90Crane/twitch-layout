@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Overlay</title>
+    <link rel="stylesheet" href="../assets/css/theme.css" />
+    <style>
+      .top-bar {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        right: 24px;
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 18px;
+      }
+
+      .stream-title {
+        font-size: 1.2rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+
+      .game-tag {
+        color: var(--accent);
+      }
+
+      .stats {
+        display: flex;
+        gap: 10px;
+      }
+
+      .stat-box {
+        min-width: 180px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid var(--accent);
+        background: rgba(255, 255, 255, 0.03);
+        font-size: 0.82rem;
+      }
+
+      .layout-area {
+        position: absolute;
+        top: 120px;
+        left: 24px;
+        right: 24px;
+        bottom: 104px;
+      }
+
+      .chat-zone {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 430px;
+        height: 100%;
+        padding: 14px;
+      }
+
+      .webcam-zone {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 640px;
+        height: 360px;
+        padding: 10px;
+      }
+
+      .webcam-inner {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        border: 2px dashed rgba(127, 255, 0, 0.7);
+        background: rgba(0, 0, 0, 0.25);
+        display: grid;
+        place-items: center;
+        color: var(--text-muted);
+        font-weight: 700;
+      }
+
+      .alert-slot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 16px;
+        width: 680px;
+        height: 120px;
+        padding: 12px;
+      }
+
+      .chat-placeholder {
+        margin-top: 12px;
+        height: calc(100% - 30px);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px dashed rgba(127, 255, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="screen">
+      <div class="grid-overlay"></div>
+
+      <header class="top-bar panel glow">
+        <div>
+          <div class="stream-title">@yourname — Ranked Grind</div>
+          <div class="section-label">Game: <span class="game-tag">VALORANT</span></div>
+        </div>
+
+        <div class="stats">
+          <div class="stat-box"><span class="section-label">Follower</span><br /><strong>@new_follower</strong></div>
+          <div class="stat-box"><span class="section-label">Subscriber</span><br /><strong>@new_sub</strong></div>
+          <div class="stat-box"><span class="section-label">Cheer</span><br /><strong>500 bits</strong></div>
+          <div class="stat-box"><span class="section-label">Tip</span><br /><strong>$10.00</strong></div>
+        </div>
+      </header>
+
+      <section class="layout-area">
+        <aside class="chat-zone panel glow">
+          <div class="section-label">Chat Box</div>
+          <div class="chat-placeholder"></div>
+        </aside>
+
+        <div class="alert-slot panel glow">
+          <div class="section-label">Alert Box (Follower/Sub/Cheer/Tip)</div>
+        </div>
+
+        <section class="webcam-zone panel glow">
+          <div class="webcam-inner">Webcam Feed Area</div>
+        </section>
+      </section>
+
+      <footer class="social-bar">
+        <div class="section-label">Socials</div>
+        <div class="social-links">
+          <div><span>TW:</span> @yourname</div>
+          <div><span>YT:</span> @yourname</div>
+          <div><span>IG:</span> @yourname</div>
+          <div><span>DC:</span> yourserver.gg</div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

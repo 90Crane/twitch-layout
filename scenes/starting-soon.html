@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starting Soon</title>
+    <link rel="stylesheet" href="../assets/css/theme.css" />
+    <style>
+      .center-wrap {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+
+      .countdown-box {
+        margin-top: 24px;
+        padding: 20px 34px;
+        display: inline-flex;
+        flex-direction: column;
+        gap: 10px;
+        background: rgba(10, 20, 34, 0.8);
+        border: var(--border-thickness) solid var(--accent);
+        border-radius: 12px;
+      }
+
+      .countdown-time {
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: 900;
+        color: var(--accent);
+      }
+
+      .corner-note {
+        position: absolute;
+        top: 24px;
+        right: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="screen">
+      <div class="grid-overlay"></div>
+
+      <div class="corner-note badge">LIVE INCOMING</div>
+
+      <section class="center-wrap">
+        <div>
+          <div class="title">Starting Soon</div>
+          <div id="countdown-label" class="subtitle">Get ready, we start shortly!</div>
+
+          <div class="countdown-box glow">
+            <span class="section-label">Countdown</span>
+            <span id="countdown-time" class="countdown-time mono">10:00</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="social-bar">
+        <div class="section-label">Follow for updates</div>
+        <div class="social-links">
+          <div><span>TW:</span> @yourname</div>
+          <div><span>YT:</span> @yourname</div>
+          <div><span>IG:</span> @yourname</div>
+          <div><span>DC:</span> yourserver.gg</div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="../assets/js/countdown.js"></script>
+  </body>
+</html>
